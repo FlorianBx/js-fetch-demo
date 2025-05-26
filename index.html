@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Smart search application for browsing through a collection of posts">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Search Intelligence - Post Search</title>
+</head>
+<body class="bg-indigo-950 min-h-screen">
+  <header class="text-center pt-10">
+    <h1 class="text-white text-6xl md:text-8xl font-bold">Search Intelligence</h1>
+  </header>
+  
+  <main class="flex flex-col items-center p-10 max-w-6xl mx-auto">
+    <div class="w-full max-w-md mt-16">
+      <label for="searchInput" class="text-white text-xl mb-4 block text-center">
+        Search posts
+      </label>
+      <input 
+        type="text" 
+        id="searchInput" 
+        placeholder="Type your search..."
+        aria-label="Search posts"
+        class="bg-gray-900 text-white w-full py-3 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all duration-200"
+      >
+    </div>
+    
+    <section 
+        id="postsContainer" 
+        class="w-full mt-16" 
+        aria-live="polite" 
+        aria-label="Search results"
+    ></section>
+  </main>
+  
+  <script type="module" src="script/main.js"></script>
+</body>
+</html>
