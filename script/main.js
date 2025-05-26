@@ -28,7 +28,7 @@ function renderPosts(posts) {
   postsContainer.innerHTML = '';
 
   if (posts.length === 0) {
-    postsContainer.innerHTML = '<p class="text-gray-500">Aucun post trouvé</p>';
+    postsContainer.innerHTML = '<p class="text-gray-500">No post found !</p>';
     return;
   }
 
@@ -67,7 +67,7 @@ async function initializeApp() {
     
   } catch (error) {
     console.error('Failed to initialize app:', error);
-    postsContainer.innerHTML = '<p class="text-red-500">Erreur lors du chargement</p>';
+    postsContainer.innerHTML = '<p class="text-red-500">Error while loading...</p>';
   }
 }
 
